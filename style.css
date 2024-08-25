@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+  :root {
+    --cor0:#2b3210 ;
+    --cor1:#505631 ;
+    --cor2:#de6e27 ;
+    --cor3:#e5e2d9 ;
+    --cor4:#fbf8ef ;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif ; 
+    --fonte-titulo:"Playfair Display", serif;
+  }
+  * {
+    margin: 0px;
+    padding: 0px;
+}  
+
+  body{
+    background-color: var(--cor3);
+    font-family: var(--fonte-padrao);
+  }
+
+  header{
+    background-color: var(--cor3);
+    min-height: 150px;
+    text-align: center;
+   
+  }  
+  header > h1 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor1);
+    font-weight: bold;
+    font-size: 2.5em;
+    padding-top: 30px;
+    margin-bottom:30px;
+  }
+  header p {
+    font-family: var(--fonte-padrao);
+    color: var(--cor1);
+    font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
+
+  nav{
+    padding: 10px;
+    background-color: var(--cor2);
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.301);
+
+  }
+
+  nav > a {
+    color: white;
+    padding: 10px;    
+    text-decoration: none;
+    transition-duration: .5s;
+    font-weight: bold;    
+
+  }
+  nav a:hover {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    color: var(--cor3);
+  }
+main {
+
+}
