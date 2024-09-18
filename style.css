@@ -154,20 +154,27 @@ p.descriçao {
   gap: 10px; /*espaço entre as fig*/
   padding: 20px;
 }
-
-figure {
-  flex: 1; /*cada figura ocupa o mesmo espçaço*/
+.foto{
+  flex: 1;
   margin: 0;
+  overflow: hidden;
+  position: relative;
 }
-figure img {
+.foto img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
+.foto:hover img {
+  transform: scale(1.1);
+}
+
 figcaption {
   font-weight: bold;
   text-align: center;
   margin-top: 5px;
+  padding: 15px;
 }
 h1#fotos-recentes {
   margin-top: 100px;
