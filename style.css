@@ -17,10 +17,10 @@
 * {
   margin: 0px;
   padding: 0px;
-  
 }
 
-html, body {
+html,
+body {
   background-color: var(--cor4);
   font-family: var(--fonte-padrao);
   margin: 0;
@@ -28,7 +28,8 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
-img,iframe{
+img,
+iframe {
   max-width: 100%;
   height: auto;
 }
@@ -85,11 +86,10 @@ nav a:hover {
   color: var(--cor3);
 }
 
-main{
+main {
   padding: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
-
 }
 
 .descriçao-geral {
@@ -97,35 +97,32 @@ main{
   align-items: center;
   border-bottom: 2px solid #ccc;
   margin-top: 10px;
-  
 }
 
 .titulo-descriçao {
   flex: 1;
   padding-right: 20px;
-  border-right: 2px solid  #ccc;
+  border-right: 2px solid #ccc;
 }
 
-.msg-descriçao  {
+.msg-descriçao {
   flex: 2;
   padding-left: 20px;
 }
 
-h2 {
+h2#descriçao {
   padding-bottom: 300px;
   text-align: right;
- 
+
   font-size: 2.3em;
   color: var(--cor0);
-  
 }
-h3{
+h3#descriçao {
   margin-bottom: 10px;
-  
-  
+
   color: var(--cor0);
 }
-p{
+p.descriçao {
   font-size: 1.1em;
   margin: 0 0 10px;
   line-height: 1.6;
@@ -133,7 +130,7 @@ p{
   margin-bottom: 20px;
 }
 
-.butao-descriçao{
+.butao-descriçao {
   display: block;
   width: 200px;
   text-align: center;
@@ -142,9 +139,53 @@ p{
   font-size: 13px;
 
   padding: 15px;
-  
+
   margin-bottom: 50px;
 
   background-color: var(--cor0);
   color: white;
+}
+
+.galeria {
+  margin-top: 100px;
+
+  display: flex; /*para alinhamento lateral*/
+  justify-content: space-between; /*espaçar as img igualmente*/
+  gap: 10px; /*espaço entre as fig*/
+  padding: 20px;
+}
+
+figure {
+  flex: 1; /*cada figura ocupa o mesmo espçaço*/
+  margin: 0;
+}
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+figcaption {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+h1#fotos-recentes {
+  margin-top: 100px;
+  text-align: center;
+  color: #2b3210;
+  font-size: 2.5em;
+}
+h2#msg-fotos-recentes {
+  font-size: 1.2em;
+  color: var(--cor0);
+  padding: 40px;
+  text-align: center;
+}
+h2#msg-fotos-recentes a {
+  text-decoration: none;
+  color: var(--cor0);
+}
+h2#msg-fotos-recentes a:hover {
+  text-decoration: underline;
+  color: var(--cor2);
 }
