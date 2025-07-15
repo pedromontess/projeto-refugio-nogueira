@@ -2,95 +2,103 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Refúgio Nogueira</title>
     <link
       rel="shortcut icon"
       href="imagens/favicon-refugio-nogueira.png"
       type="image/x-icon"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--titulo principal-->
     <header>
       <h1>
-        <span class="refugio"> Refúgio </span> <br />
-        <span class="nogueira"> Nogueira </span>
+        <span class="refugio">Refúgio</span><br />
+        <span class="nogueira">Nogueira</span>
       </h1>
       <p>Tudo que você sempre quis encontrar em sua hospedagem</p>
     </header>
-    <!--menu de navegação-->
+
     <nav>
-      <a href="#" target="_blank">Inicio</a>
-      <a href="#" target="_blank">Sobre o Sítio</a>
-      <a href="#" target="_blank">Fotos</a>
-      <a href="#" target="_blank">Reserve Agora</a>
-      <a href="#" target="_blank">Contatos</a>
-      <a href="#" target="_blank">FAQ</a>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre o Sítio</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#reserva">Reserve Agora</a>
+      <a href="#contatos">Contatos</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
-    <!--conteudo e descrição-->
-
     <main>
-      <section class="descriçao-geral">
-        <div class="titulo-descriçao">
-          <h2 id="descriçao">
-            Seja Bem-Vindo(a) <br />
-            ao Refúgio Nogueira
-          </h2>
+      <section id="inicio" class="descricao-geral">
+        <div class="titulo-descricao">
+          <h2>Seja Bem-Vindo(a)<br />ao Refúgio Nogueira</h2>
         </div>
 
-        <div class="msg-descriçao">
-          <h3 id="descriçao">
+        <div class="msg-descricao">
+          <h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
             ut nesciunt ducimus, doloremque cumque nobis exercitationem,
             corrupti nisi sint iste placeat unde delectus amet expedita. Nemo
             incidunt vitae impedit asperiores.
           </h3>
 
-          <p class="descriçao">
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             perspiciatis quae corrupti animi rem molestias eum aliquam deserunt
             obcaecati veritatis? Fugit ipsam doloremque quis perferendis
             assumenda sunt inventore, tempora dolor!
           </p>
 
-          <p class="descriçao">
+          <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. A dolorum,
-            maiores adipisci nihil
+            maiores adipisci nihil.
           </p>
-          <a href="#" class="butao-descriçao" target="_blank"
-            >Faça sua Reserva via Whatsapp</a
-          >
+          <button id="btnWhatsapp" class="botao-descricao">
+            Faça sua Reserva via Whatsapp
+          </button>
         </div>
       </section>
-      <!--sessão com 3 imagens-->
-      <section class="galeria">
+
+      <section id="galeria" class="galeria">
         <figure class="foto">
-          <img src="imagens/img01.jpg" alt="Descrição1" />
+          <img src="imagens/img01.jpg" alt="Descrição da Foto 1" />
           <figcaption>Descrição da Foto 1</figcaption>
         </figure>
 
         <figure class="foto">
-          <img src="imagens/img02.jpg" alt="Descrição2" />
+          <img src="imagens/img02.jpg" alt="Descrição da Foto 2" />
           <figcaption>Descrição da Foto 2</figcaption>
         </figure>
 
         <figure class="foto">
-          <img src="imagens/img03.jpg" alt="Descrição3" />
+          <img src="imagens/img03.jpg" alt="Descrição da Foto 3" />
           <figcaption>Descrição da Foto 3</figcaption>
         </figure>
       </section>
-      <!--sessão para divulgar o insta, vai conter imgs-->
-      <section>
-        <h1 id="fotos-recentes">Fotos Recentes</h1>
-        <h2 id="msg-fotos-recentes">
-          <strong>Siga o Refúgio Nogueira no Instagram</strong> e Veja todas as
+
+      <section id="instagram" class="instagram">
+        <h1>Fotos Recentes</h1>
+        <h2>
+          <strong>Siga o Refúgio Nogueira no Instagram</strong> e veja todas as
           fotos, postagens e promoções!
-          <a href="#" target="_blank">@RefugioNogueira</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">@RefugioNogueira</a>
         </h2>
       </section>
     </main>
+
+    <script>
+      document.getElementById('btnWhatsapp').addEventListener('click', () => {
+        const phone = '5599999999999'; // Coloque seu número com DDI + DDD + número
+        const message = encodeURIComponent(
+          'Olá! Vi seu sítio em um anúncio e gostaria de saber mais para agendar uma hospedagem!'
+        );
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+      });
+    </script>
   </body>
 </html>
