@@ -1,7 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* style.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Macondo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Qwitcher+Grypen:wght@400;700&display=swap");
+@charset "UTF-8";
 
 :root {
   --cor0: #2b3210;
@@ -14,188 +13,245 @@
   --fonte-titulo: "Playfair Display", serif;
   --fonte-titulo-detalhada: "Qwitcher Grypen", cursive;
 }
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
   background-color: var(--cor4);
   font-family: var(--fonte-padrao);
-  margin: 0;
-  padding: 0;
   width: 100%;
   overflow-x: hidden;
+  color: var(--cor1);
 }
+
 img,
 iframe {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 header {
   background-color: var(--cor4);
-  min-height: 150px;
   text-align: center;
+  padding: 30px 15px 40px;
 }
+
 header > h1 {
   font-family: var(--fonte-titulo);
-  color: var(--cor1);
-  font-weight: bold;
-  font-size: 2.5em;
-  padding-top: 30px;
-  margin-bottom: 30px;
+  color: var(--cor0);
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
 }
+
 .refugio {
-  font-family: var(--fonte-titulo);
-  font-size: 1.5em;
-  margin-bottom: -80px;
+  font-size: 1.5rem;
   display: block;
+  margin-bottom: -20px;
 }
+
 .nogueira {
   font-family: var(--fonte-titulo-detalhada);
-  font-size: 2em;
+  font-size: 2.5rem;
   display: block;
+  margin-top: 0;
 }
+
 header p {
   font-family: var(--fonte-padrao);
   color: var(--cor1);
-  font-size: 1.8em;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 30px;
+  font-size: 1.25rem;
+  margin-top: 15px;
 }
 
 nav {
-  padding: 10px;
   background-color: var(--cor2);
-  box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.301);
+  padding: 12px 15px;
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 nav > a {
-  color: white;
-  padding: 10px;
+  color: #fff;
+  font-weight: 700;
   text-decoration: none;
-  transition-duration: 0.5s;
-  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-nav a:hover {
+
+nav > a:hover,
+nav > a:focus {
   background-color: var(--cor0);
-  border-radius: 10px;
   color: var(--cor3);
+  outline: none;
 }
 
 main {
-  padding: 20px;
-  margin-top: 50px;
+  padding: 20px 15px;
+  max-width: 1100px;
+  margin: 50px auto 70px;
+}
+
+.descricao-geral {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
   margin-bottom: 50px;
 }
 
-.descriçao-geral {
-  display: flex;
-  align-items: center;
-
-  margin-top: 10px;
-}
-
-.titulo-descriçao {
-  flex: 1;
+.titulo-descricao {
+  flex: 1 1 250px;
   padding-right: 20px;
   border-right: 2px solid #ccc;
 }
 
-.msg-descriçao {
-  flex: 2;
+.msg-descricao {
+  flex: 2 1 400px;
   padding-left: 20px;
 }
 
-h2#descriçao {
-  padding-bottom: 300px;
+.titulo-descricao h2 {
+  font-size: 2.3rem;
+  color: var(--cor0);
   text-align: right;
-
-  font-size: 2.3em;
-  color: var(--cor0);
 }
-h3#descriçao {
-  margin-bottom: 10px;
 
+.msg-descricao h3 {
+  font-size: 1.3rem;
   color: var(--cor0);
+  margin-bottom: 12px;
 }
-p.descriçao {
-  font-size: 1.1em;
-  margin: 0 0 10px;
+
+.msg-descricao p {
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--cor1);
   margin-bottom: 20px;
 }
 
-.butao-descriçao {
-  display: block;
-  width: 200px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 13px;
-
-  padding: 15px;
-
-  margin-bottom: 50px;
-
+.botao-descricao {
+  display: inline-block;
   background-color: var(--cor0);
   color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
-.butao-descriçao:hover {
-  background-color: #22270c;
-}
-.galeria {
-  margin-top: 100px;
 
-  display: flex; /*para alinhamento lateral*/
-  justify-content: space-between; /*espaçar as img igualmente*/
-  gap: 10px; /*espaço entre as fig*/
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
+.botao-descricao:hover,
+.botao-descricao:focus {
+  background-color: #22270c;
+  outline: none;
 }
+
+.galeria {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
 .foto {
-  flex: 1;
-  margin: 0;
+  flex: 1 1 30%;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
 }
+
 .foto img {
   width: 100%;
   height: auto;
-  display: block;
   transition: transform 0.3s ease;
+  border-radius: 6px 6px 0 0;
+  display: block;
 }
-.foto:hover img {
+
+.foto:hover img,
+.foto:focus-within img {
   transform: scale(1.1);
 }
 
 figcaption {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  margin-top: 5px;
-  padding: 15px;
-}
-h1#fotos-recentes {
-  margin-top: 100px;
-  text-align: center;
-  color: #2b3210;
-  font-size: 2.5em;
-}
-h2#msg-fotos-recentes {
-  font-size: 1.2em;
+  padding: 12px 10px;
   color: var(--cor0);
-  padding: 40px;
-  text-align: center;
+  background-color: var(--cor3);
+  border-radius: 0 0 6px 6px;
 }
-h2#msg-fotos-recentes a {
-  text-decoration: none;
+
+.instagram {
+  text-align: center;
+  margin-top: 80px;
+  padding: 40px 15px;
   color: var(--cor0);
 }
-h2#msg-fotos-recentes a:hover {
-  text-decoration: underline;
+
+.instagram h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.instagram h2 {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.instagram a {
   color: var(--cor2);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.instagram a:hover,
+.instagram a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .descricao-geral {
+    flex-direction: column;
+    border-right: none;
+  }
+  .titulo-descricao,
+  .msg-descricao {
+    padding: 0;
+    border: none;
+  }
+  .titulo-descricao h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .galeria {
+    flex-direction: column;
+  }
+  .foto {
+    flex: 1 1 100%;
+  }
 }
